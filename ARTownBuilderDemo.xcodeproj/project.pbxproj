@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		216E98AB2515B3F000E9FC9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E98AA2515B3F000E9FC9B /* AppDelegate.swift */; };
-		216E98AD2515B3F000E9FC9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E98AC2515B3F000E9FC9B /* ViewController.swift */; };
 		216E98AF2515B3F000E9FC9B /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 216E98AE2515B3F000E9FC9B /* Experience.rcproject */; };
 		216E98B22515B3F000E9FC9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 216E98B02515B3F000E9FC9B /* Main.storyboard */; };
 		216E98B42515B3F400E9FC9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 216E98B32515B3F400E9FC9B /* Assets.xcassets */; };
 		216E98B72515B3F400E9FC9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 216E98B52515B3F400E9FC9B /* LaunchScreen.storyboard */; };
+		216E98BF2515B41B00E9FC9B /* echoARSwiftSDK in Resources */ = {isa = PBXBuildFile; fileRef = 216E98BE2515B41B00E9FC9B /* echoARSwiftSDK */; };
+		216E98C12515B5B400E9FC9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E98C02515B5B400E9FC9B /* ViewController.swift */; };
+		216E98C32515B5C600E9FC9B /* EchoAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E98C22515B5C600E9FC9B /* EchoAR.swift */; };
+		216E98C52515B5C800E9FC9B /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E98C42515B5C800E9FC9B /* Entry.swift */; };
+		216E98C72515B5CC00E9FC9B /* RemoteTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E98C62515B5CC00E9FC9B /* RemoteTransformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		216E98A72515B3F000E9FC9B /* ARParkBuilderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARParkBuilderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		216E98A72515B3F000E9FC9B /* ARTownBuilderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTownBuilderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		216E98AA2515B3F000E9FC9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		216E98AC2515B3F000E9FC9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		216E98AE2515B3F000E9FC9B /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		216E98B12515B3F000E9FC9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		216E98B32515B3F400E9FC9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		216E98B62515B3F400E9FC9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		216E98B82515B3F400E9FC9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		216E98BE2515B41B00E9FC9B /* echoARSwiftSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; path = echoARSwiftSDK; sourceTree = "<group>"; };
+		216E98C02515B5B400E9FC9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		216E98C22515B5C600E9FC9B /* EchoAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoAR.swift; sourceTree = "<group>"; };
+		216E98C42515B5C800E9FC9B /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		216E98C62515B5CC00E9FC9B /* RemoteTransformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTransformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +48,7 @@
 		216E989E2515B3F000E9FC9B = {
 			isa = PBXGroup;
 			children = (
-				216E98A92515B3F000E9FC9B /* ARParkBuilderDemo */,
+				216E98A92515B3F000E9FC9B /* ARTownBuilderDemo */,
 				216E98A82515B3F000E9FC9B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,31 +56,35 @@
 		216E98A82515B3F000E9FC9B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				216E98A72515B3F000E9FC9B /* ARParkBuilderDemo.app */,
+				216E98A72515B3F000E9FC9B /* ARTownBuilderDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		216E98A92515B3F000E9FC9B /* ARParkBuilderDemo */ = {
+		216E98A92515B3F000E9FC9B /* ARTownBuilderDemo */ = {
 			isa = PBXGroup;
 			children = (
+				216E98C22515B5C600E9FC9B /* EchoAR.swift */,
+				216E98C42515B5C800E9FC9B /* Entry.swift */,
+				216E98C62515B5CC00E9FC9B /* RemoteTransformation.swift */,
+				216E98BE2515B41B00E9FC9B /* echoARSwiftSDK */,
 				216E98AA2515B3F000E9FC9B /* AppDelegate.swift */,
-				216E98AC2515B3F000E9FC9B /* ViewController.swift */,
+				216E98C02515B5B400E9FC9B /* ViewController.swift */,
 				216E98AE2515B3F000E9FC9B /* Experience.rcproject */,
 				216E98B02515B3F000E9FC9B /* Main.storyboard */,
 				216E98B32515B3F400E9FC9B /* Assets.xcassets */,
 				216E98B52515B3F400E9FC9B /* LaunchScreen.storyboard */,
 				216E98B82515B3F400E9FC9B /* Info.plist */,
 			);
-			path = ARParkBuilderDemo;
+			path = ARTownBuilderDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		216E98A62515B3F000E9FC9B /* ARParkBuilderDemo */ = {
+		216E98A62515B3F000E9FC9B /* ARTownBuilderDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 216E98BB2515B3F400E9FC9B /* Build configuration list for PBXNativeTarget "ARParkBuilderDemo" */;
+			buildConfigurationList = 216E98BB2515B3F400E9FC9B /* Build configuration list for PBXNativeTarget "ARTownBuilderDemo" */;
 			buildPhases = (
 				216E98A32515B3F000E9FC9B /* Sources */,
 				216E98A42515B3F000E9FC9B /* Frameworks */,
@@ -82,9 +94,9 @@
 			);
 			dependencies = (
 			);
-			name = ARParkBuilderDemo;
-			productName = ARParkBuilderDemo;
-			productReference = 216E98A72515B3F000E9FC9B /* ARParkBuilderDemo.app */;
+			name = ARTownBuilderDemo;
+			productName = ARTownBuilderDemo;
+			productReference = 216E98A72515B3F000E9FC9B /* ARTownBuilderDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +114,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 216E98A22515B3F000E9FC9B /* Build configuration list for PBXProject "ARParkBuilderDemo" */;
+			buildConfigurationList = 216E98A22515B3F000E9FC9B /* Build configuration list for PBXProject "ARTownBuilderDemo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +127,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				216E98A62515B3F000E9FC9B /* ARParkBuilderDemo */,
+				216E98A62515B3F000E9FC9B /* ARTownBuilderDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +140,7 @@
 				216E98B72515B3F400E9FC9B /* LaunchScreen.storyboard in Resources */,
 				216E98B42515B3F400E9FC9B /* Assets.xcassets in Resources */,
 				216E98B22515B3F000E9FC9B /* Main.storyboard in Resources */,
+				216E98BF2515B41B00E9FC9B /* echoARSwiftSDK in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				216E98AD2515B3F000E9FC9B /* ViewController.swift in Sources */,
+				216E98C72515B5CC00E9FC9B /* RemoteTransformation.swift in Sources */,
+				216E98C52515B5C800E9FC9B /* Entry.swift in Sources */,
+				216E98C12515B5B400E9FC9B /* ViewController.swift in Sources */,
+				216E98C32515B5C600E9FC9B /* EchoAR.swift in Sources */,
 				216E98AB2515B3F000E9FC9B /* AppDelegate.swift in Sources */,
 				216E98AF2515B3F000E9FC9B /* Experience.rcproject in Sources */,
 			);
@@ -286,13 +302,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A8AAB759SX;
-				INFOPLIST_FILE = ARParkBuilderDemo/Info.plist;
+				INFOPLIST_FILE = ARTownBuilderDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = DayeDev.ARParkBuilderDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = DayeDev.ARTownBuilderDemo;
+				PRODUCT_NAME = ARTownBuilderDemo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,13 +320,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A8AAB759SX;
-				INFOPLIST_FILE = ARParkBuilderDemo/Info.plist;
+				INFOPLIST_FILE = ARTownBuilderDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = DayeDev.ARParkBuilderDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = DayeDev.ARTownBuilderDemo;
+				PRODUCT_NAME = ARTownBuilderDemo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -319,7 +335,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		216E98A22515B3F000E9FC9B /* Build configuration list for PBXProject "ARParkBuilderDemo" */ = {
+		216E98A22515B3F000E9FC9B /* Build configuration list for PBXProject "ARTownBuilderDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				216E98B92515B3F400E9FC9B /* Debug */,
@@ -328,7 +344,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		216E98BB2515B3F400E9FC9B /* Build configuration list for PBXNativeTarget "ARParkBuilderDemo" */ = {
+		216E98BB2515B3F400E9FC9B /* Build configuration list for PBXNativeTarget "ARTownBuilderDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				216E98BC2515B3F400E9FC9B /* Debug */,

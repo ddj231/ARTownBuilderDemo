@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  ARParkBuilderDemo
+//  ARTownBuilderDemo
 //
 //  Created by DAYE JACK on 9/18/20.
 //  Copyright © 2020 DAYE JACK. All rights reserved.
@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UIApplication.shared.isIdleTimerDisabled = true
+        
         return true
     }
 
