@@ -1,10 +1,14 @@
+/**************************************************************************
+* Copyright (C) echoAR, Inc. 2018-2020.
+* echoAR, Inc. proprietary and confidential.
+* Use subject to the terms of the Terms of Service available at
+* https://www.echoar.xyz/terms, or another agreement
+* between echoAR, Inc. and you, your company or other organization.
+**************************************************************************/
+
 import UIKit
 import SceneKit
 import ARKit
-
-
-//Inspired by Jayven Nhan Scenekit demo, Sri Adatrao ARkit detecting planes, Benjamin Kindle
-//article
 
 
 class ViewController: UIViewController, ARSCNViewDelegate {
@@ -143,11 +147,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         //sceneView.session.pause()
     }
     
+    //handlePinch(panGesture:) - takes a UIPinchGestureRecognizer as an argument
+    //called whenever a user does a two finger pinch
+    //calls the doScale method
     @objc func handlePinch(pinchRecognizer: UIPinchGestureRecognizer){
         //call do scale to scale node on user pinch gesture
         doScale(recognizer: pinchRecognizer)
     }
     
+    //addObjToScene(panGesture:) - takes a UIGestureRecognizer as an argument
+    //called whenever a user taps the screen
+    //calls either doAdd() or doDelete()
     @objc func addObjToSceneView(withGestureRecognizer recognizer: UIGestureRecognizer){
         //get location of the tap gesture
         let tapLocation = recognizer.location(in: sceneView)
@@ -171,6 +181,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
+    //handelePan(panGesture:) - takes a UIPanGestureRecognizer as an argument
+    //called whenever a user makes a pan gesture
+    //calls either doDrag() or doRotate()
     @objc func handlePan(panGesture: UIPanGestureRecognizer){
         //if drag button is selected drag the touched node on pan gesture
         /// but if rotate is selected rotate the node
@@ -182,6 +195,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
+    //doScale(recognizer:) - takes a UIPinchGestureRecognizer as an argument
+    //scales a node to the sceneView based on the state of the gesture recognizer
     func doScale(recognizer: UIPinchGestureRecognizer){
         //get the location of the pinch
         let location = recognizer.location(in: sceneView)
@@ -200,6 +215,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
+    //doAdd(recognizer:) - takes a UIGestureRecognizer as an argument
+    //adds a node to the sceneView based on the state of the gesture recognizer
     func doAdd(withGestureRecognizer recognizer: UIGestureRecognizer){
         //get the location of the tap
         let tapLocation = recognizer.location(in: sceneView)
@@ -228,11 +245,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             //scale down the node using our scale constants
             let action = SCNAction.scale(by: scaleConstants![selectedInd], duration: 0.3)
             selectedNode.runAction(action)
-            /*
-            if selectedInd == 6 {
-                selectedNode.eulerAngles.y = .pi
-            }
-             */
+            
             //set the name of the node (just in case we ever need it)
             selectedNode.name = idArr![selectedInd]
             
@@ -241,13 +254,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
+    //doDrag(panGesture:): takes a UIPanGesture as an argument
+    //moves the location of a node based on the state of the pan gesture
     func doDrag(panGesture: UIPanGestureRecognizer){
         guard let view = self.sceneView else {return}
         //get the location of the user's pan gesture
         let location = panGesture.location(in: self.view)
         print("begin pan")
-        
-        
+
         switch panGesture.state {
         //if the pan gesture is just beginning
         case .began:
@@ -284,6 +298,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             break
         }
     }
+    
+    //doRotate(rotateGesture:): takes a UIPanGesture as an argument
+    //rotate's a node based on the state of the pan gesture
     func doRotate(rotateGesture: UIPanGestureRecognizer){
         guard let view = self.sceneView else {return}
         //get location of the user's rotate gesture
@@ -303,6 +320,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
 
+    //resetChoiceButtonAlphas()
+    //sets all choice button alphas to the default state
     func resetChoiceButtonAlphas(){
         //when buttons are not selected, dim them
         treeButton.alpha = 0.3
@@ -315,6 +334,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         bikeButton.alpha = 0.3
     }
     
+    //resetEditButtonAlphas()
+    //sets all edit button alphas to the default state
     func resetEditButtonAlphas(){
         //when buttons are not selected, dim them
         dragButton.alpha = 0.3
@@ -323,6 +344,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         addButton.alpha = 0.3
 }
 
+    //choiceButtonTapped(sender:)
+    //takes a sender as an argument
+    //for our purposes the sender represents which choice button that was tapped
+    //updates state of buttons, by updating alphas
     @IBAction func choiceButtonTapped(_ sender: Any) {
         guard let button = sender as? UIButton else { return }
         //reset all choice buttons (dimming them)
@@ -333,6 +358,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         selectedInd = button.tag
     }
     
+    //editButtonTapped(sender:): takes a sender as an argument
+    //called whenever an edit button is tapped
+    //for our purposes the sender represents which edit button that was tapped
+    //updates state of buttons, by updating alphas
     @IBAction func editButtonTapped(_ sender: Any) {
         guard let button = sender as? UIButton else { return }
         //reset edit all buttons (dimming them)
@@ -342,6 +371,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         button.alpha = 1.0
     }
     
+    //togglePlaneTapped(sender:):
+    //called whenever the togglePlaneButton is tapped
+    //changes the state of the togglePlaneButton (by changing its alpha)
+    //calls the togglePlane(planeNode:) function on all planeNodes
     @IBAction func togglePlaneTapped(_ sender: Any) {
         //if toggle plane tapped,
         //iterate through all horizontal planes, and set their alpha's to 0.0
@@ -354,6 +387,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         print(togglePlaneButton.alpha)
     }
     
+    //togglePlane(planeNode:): takes a SCNNode as an argument
+    //depending on the state of the togglePlaneButton, changes the color
+    //of planeNode. (either to fully transparent, or to a translucent green)
     func togglePlane(planeNode: SCNNode){
         //make plane visible or invisible, by changing its color
         if togglePlaneButton.alpha.isEqual(to: 1.0) {
@@ -362,6 +398,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         else {
             planeNode.geometry?.materials.first?.diffuse.contents = planeColor
         }
+    }
+    
+    //isPlane(node:): takes an SCNNode as an argument
+    //returns true if the node is named "plain" otherwise returns false
+    func isPlane(node: SCNNode) -> Bool {
+        guard  let name = node.name else {
+            return false
+        }
+        if name == "plain"{
+            return true
+        }
+        return false
     }
     
     // MARK: - ARSCNViewDelegate
@@ -429,15 +477,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         node.addChildNode(planeNode)
     }
     
-    //helper function to check if a given node is a plane
-    func isPlane(node: SCNNode) -> Bool {
-        guard  let name = node.name else {
-            return false
-        }
-        if name == "plain"{
-            return true
-        }
-        return false
-    }
-
 }
+
+//Additional notes and credits:
+//Apple Documentation, Tracking and Visual Planes - https://developer.apple.com/documentation/arkit/world_tracking/tracking_and_visualizing_planes
+//Jayven Nhan, ArKit Horizontal Planes- https://www.appcoda.com/arkit-horizontal-plane/
+//Sri Adatrao, ARkit detecting planes - https://machinethinks.com/arkit-detecting-planes-and-placing-objects/
+//Benjamin Kindle, Dragging Objects in SceneKit and ARKit  - https://medium.com/@literalpie/dragging-objects-in-scenekit-and-arkit-3568212a90e5
+
