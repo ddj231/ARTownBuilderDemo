@@ -299,7 +299,7 @@
 		216E98BC2515B3F400E9FC9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A8AAB759SX;
 				INFOPLIST_FILE = ARTownBuilderDemo/Info.plist;
@@ -317,7 +317,7 @@
 		216E98BD2515B3F400E9FC9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A8AAB759SX;
 				INFOPLIST_FILE = ARTownBuilderDemo/Info.plist;

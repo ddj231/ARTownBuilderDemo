@@ -24,14 +24,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var myPlanes: [SCNNode] = []
     
     //echoAR entry id's for 3D models for app
-    let treeId = "a3afa700-c20a-4366-9441-64ea0a14f750"
-    let picnicTableId = "ddb22b24-1acc-41a6-825d-fb2d78040f9c"
-    let roadId = "32b22856-24af-43c4-bbbe-88ad98998a46"
-    let poolId = "0916c8f6-5d31-4b66-9bf4-a5b1f4e6509f"
-    let mailBoxId = "3952a84c-0b6a-4917-9e89-89bc7c318590"
-    let houseId = "a294665c-7e9c-4d15-96de-fb750afded31"
-    let deerId = "d356f8f6-1f60-4613-a108-80eb50ae3ded"
-    let bikeId = "5c76694e-ec84-411e-b85c-670439717932"
+    let treeId = "a3afa700-c20a-4366-9441-64ea0a14f750" // insert your entry id here
+    let picnicTableId = "ddb22b24-1acc-41a6-825d-fb2d78040f9c" // insert your entry id here
+    let roadId = "32b22856-24af-43c4-bbbe-88ad98998a46" // insert your entry id here
+    let poolId = "0916c8f6-5d31-4b66-9bf4-a5b1f4e6509f" // insert your entry id here
+    let mailBoxId = "3952a84c-0b6a-4917-9e89-89bc7c318590" // insert your entry id here
+    let houseId = "a294665c-7e9c-4d15-96de-fb750afded31" // insert your entry id here
+    let deerId = "d356f8f6-1f60-4613-a108-80eb50ae3ded" // insert your entry id here
+    let bikeId = "5c76694e-ec84-411e-b85c-670439717932" // insert your entry id here
 
     //buttons for selecting objects to add to sceneView
     @IBOutlet weak var togglePlaneButton: UIButton!
@@ -98,6 +98,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         idArr = [treeId, roadId, poolId, picnicTableId, mailBoxId, houseId, deerId, bikeId]
         
         //default scale constants for the objects (reducing their size to start)
+        //(if you chose entries different from the suggested,
+        //update these constants to match the size of the entries chosen)
         scaleConstants = [0.009, 0.0004, 0.002, 0.0001, 0.004, 0.003, 0.0004, 0.000013]
 
         // Show statistics such as fps and timing information
