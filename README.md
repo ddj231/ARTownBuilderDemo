@@ -1,9 +1,8 @@
-# ARTownBuilderDemo
+# ARTownBuilderDemo (iOS Swift)
 
 ## Overview
-ARTownBuilderDemo is a tabletop augmented reality demo app that allows users
-to build a virtual neighborhood on a horizontal surface. ARTownBuilderDemo uses the 
-echoAR platform to load in all 3D content used in the app.
+ARTownBuilderDemo is a tabletop augmented reality iOS demo app, built with the echoAR Swift SDK, that allows users
+to build virtual neighborhoods on horizontal surfaces. 
 
 ### How To Recreate The Demo
 
