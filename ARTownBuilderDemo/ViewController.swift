@@ -80,7 +80,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //set all model choice button alpha's to the deselect state
         resetChoiceButtonAlphas()
         
@@ -140,15 +140,21 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.session.run(configuration)
        
         sceneView.delegate = self
-        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        
+        //uncomment to see feature points
+        //sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        // Pause the view's session
-        //sceneView.session.pause()
+    override func viewDidAppear(_ animated: Bool) {
+        //when the view appears, present an alert to the user
+        //letting them know to scan a horizontal surface
+        let alert = UIAlertController(title: "Scan And Get Started", message: "Move your phone around to scan a horizontal plane", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
+
     //handlePinch(panGesture:) - takes a UIPinchGestureRecognizer as an argument
     //called whenever a user does a two finger pinch
     //calls the doScale method
