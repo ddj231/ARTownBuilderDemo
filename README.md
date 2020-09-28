@@ -8,10 +8,10 @@ echoAR platform to load in all 3D assets used in the app.
 
 ### Screenshots
 
-![screenshot](Screenshots/1)
+![screenshot](./Screenshots/1.PNG)
 
-![screenshot](Screenshots/2)
+![screenshot](./Screenshots/2.PNG)
 
-![screenshot](Screenshots/3)
+![screenshot](./Screenshots/3.PNG)
 
-![screenshot](Screenshots/4)
+![screenshot](./Screenshots/4.PNG)
